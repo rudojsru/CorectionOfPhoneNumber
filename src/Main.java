@@ -9,8 +9,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        final String TEXT = "src/originText.txt";   //C:\Tomek
-        final String TEXTmodified = "src/modifiedText.txt";
+        final String TEXT = "C:\\Tomek/Text.txt";   //C:\Tomek
+        final String TEXTmodified = "C:\\Tomek/modifiedText.txt";
         BufferedReader br;
         List<String> lines = new LinkedList<>();
         String line = null;
@@ -40,7 +40,7 @@ public class Main {
                 String myString=lines.get(i);
                 char[] myCharArray =myString.toCharArray();
 
-                bw.write(lines.get(i) + "\n");
+                bw.write(lines.get(i) + "\r\n");
 
             }
             bw.close();
