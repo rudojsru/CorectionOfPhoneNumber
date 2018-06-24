@@ -15,7 +15,8 @@ public class WorkWithFile {
 
     public static void main(String[] args) {
         readFile();
-       // writerFile();
+        System.out.println("Input file: "+lines);
+        writerFile();
     }
 
    private static void readFile(){
@@ -29,7 +30,6 @@ public class WorkWithFile {
                 lines.add(line);
             }
             br.close();
-            System.out.println("Input file: "+lines);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -44,13 +44,12 @@ public class WorkWithFile {
             fileWriter = new FileWriter(TEXTmodified);
             BufferedWriter bw=new BufferedWriter(fileWriter);
 
-            for(int i =lines.size()-1; i>0; i-- ){
+            for(int i =lines.size()-1; i>=0; i-- ){
                 bw.write(lines.get(i)+";"+"\n");
             }
+            bw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 }
