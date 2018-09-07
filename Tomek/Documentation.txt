@@ -1,0 +1,4 @@
+1) Utwórz folder: C:\Tomek
+2) File ktory trzeba zmodyfikowaæ trzebo nazwaæ: Text.txt
+3) Kliknij file CorrectionOfPhoneNumber.jar
+4) Powinien utworzyæ siê nowy file:  modifiedText.txt 
