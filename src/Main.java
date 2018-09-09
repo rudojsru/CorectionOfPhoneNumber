@@ -9,8 +9,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        final String TEXT = "C:\\Tomek/Text.txt";   //C:\Tomek
-        final String TEXTmodified = "C:\\Tomek/modifiedText.txt";
+        String track= trackToFiles(); // Stiezka do fila gdzie lizy program
+
+        final String TEXT = track+"Text.txt";
+        final String TEXTmodified = track+"modifiedText.txt";
+
         BufferedReader br;
         List<String> lines = new LinkedList<>();
         String line = null;
@@ -47,6 +50,26 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+    }
+
+    private static String trackToFiles() {
+        String track=new File(".").getAbsolutePath();
+        System.out.println(track);
+
+        String [] splitTrack =track.split("");
+        System.out.println(splitTrack.length);
+        track="";
+
+
+        for (int i=0; i<splitTrack.length-1; i++){
+            track+=splitTrack[i];
+
+        }
+
+
+        System.out.println(track);
+        return track;
 
     }
 
