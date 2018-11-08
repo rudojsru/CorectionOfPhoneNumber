@@ -82,13 +82,13 @@ public class Main {
             arrayList.addAll(Arrays.asList(line.split("")).subList(2,line.length()));
             arrayList.set(0,"0");
             arrayList.add(arrayList.size(),";");
-            backLine=arrayList.toString().replaceAll("[,\\s\\[\\]]", "");
+            backLine=arrayList.toString().replaceAll("[,\\s\\[\\],[?]]", "");
         }else
         if (((ifNumver[0].equals("0"))&&(ifNumver[1].equals("0")))){
             arrayList.addAll(Arrays.asList(line.split("")).subList(3,line.length()));
             arrayList.set(0,"0");
             arrayList.add(arrayList.size(),";");
-            backLine=arrayList.toString().replaceAll("[,\\s\\[\\]]", "");
+            backLine=arrayList.toString().replaceAll("[,\\s\\[\\],[?]]", "");
         }
          else {
             backLine=line;
