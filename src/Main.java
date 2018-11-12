@@ -22,8 +22,11 @@ public class Main {
             br = new BufferedReader(new FileReader(TEXT));
 
             while ((line = br.readLine()) != null) {
-                line=newPhoneNumber(line);
-                lines.add(line);
+                if (!line.equals("") ) {  // что бы небыло скопировано пустой строчки
+
+                    line = newPhoneNumber(line);
+                    lines.add(line);
+                }
             }
             br.close();
             System.out.println("input file: "+lines);
